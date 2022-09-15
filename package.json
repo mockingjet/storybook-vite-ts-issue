@@ -1,0 +1,46 @@
+{
+	"name": "@srx-ui/monorepo",
+	"version": "1.0.0",
+	"private": true,
+	"description": "SRX Design System UI Library",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"postinstall": "pnpx rimraf ./node_modules/@types/react"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@master/css": "^1.36.0",
+		"@master/normal.css": "^1.9.7",
+		"@vueuse/core": "^9.2.0",
+		"consola": "^2.15.3",
+		"vue": "^3.2.38"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.1.2",
+		"@commitlint/config-conventional": "^17.1.0",
+		"@typescript-eslint/eslint-plugin": "^5.0.0",
+		"@vitejs/plugin-vue": "^3.0.3",
+		"@vitejs/plugin-vue-jsx": "^2.0.1",
+		"eslint": "^8.0.1",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-config-standard-with-typescript": "^22.0.0",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-n": "^15.0.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-promise": "^6.0.0",
+		"eslint-plugin-vue": "^9.3.0",
+		"lint-staged": "^13.0.3",
+		"prettier": "^2.7.1",
+		"simple-git-hooks": "^2.8.0",
+		"typescript": ">=4.4",
+		"vite": "^3.0.9",
+		"vue-tsc": "^0.40.13"
+	},
+	"simple-git-hooks": {
+		"pre-commit": "pnpm lint-staged",
+		"commit-msg": "pnpm commitlint -g .commitlintrc.js -e $1"
+	}
+}
